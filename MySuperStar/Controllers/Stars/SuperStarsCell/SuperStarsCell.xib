@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="superstarsCell" id="gTV-IL-0wX" customClass="SuperStarsCell" customModule="MySuperStar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="284" height="369"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="284" height="369"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wUT-KS-c2Y">
+                        <rect key="frame" x="0.0" y="0.0" width="284" height="369"/>
+                        <subviews>
+                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="p4h-tu-GUe">
+                                <rect key="frame" x="0.0" y="0.0" width="284" height="369"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me" translatesAutoresizingMaskIntoConstraints="NO" id="PdN-ht-K40">
+                                        <rect key="frame" x="0.0" y="0.0" width="284" height="334"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Will Smith" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qa-L0-ewX">
+                                        <rect key="frame" x="0.0" y="334" width="284" height="15"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="czM-fQ-YVy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Will Smith is Me" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szj-Po-DI3">
+                                        <rect key="frame" x="0.0" y="349" width="284" height="20"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="V14-yP-r3e"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="10"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="p4h-tu-GUe" secondAttribute="bottom" id="NP2-3x-43z"/>
+                            <constraint firstAttribute="trailing" secondItem="p4h-tu-GUe" secondAttribute="trailing" id="c6x-R7-LSL"/>
+                            <constraint firstItem="p4h-tu-GUe" firstAttribute="top" secondItem="wUT-KS-c2Y" secondAttribute="top" id="efh-Bf-uK8"/>
+                            <constraint firstItem="p4h-tu-GUe" firstAttribute="leading" secondItem="wUT-KS-c2Y" secondAttribute="leading" id="mMn-oO-W51"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="wUT-KS-c2Y" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="E2r-BN-sWs"/>
+                <constraint firstAttribute="trailing" secondItem="wUT-KS-c2Y" secondAttribute="trailing" id="Hf8-om-Az4"/>
+                <constraint firstAttribute="bottom" secondItem="wUT-KS-c2Y" secondAttribute="bottom" id="fpR-Ez-4bL"/>
+                <constraint firstItem="wUT-KS-c2Y" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="o31-9s-Z43"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="213" height="338"/>
+            <connections>
+                <outlet property="cell_view" destination="wUT-KS-c2Y" id="h4n-yP-qEX"/>
+                <outlet property="iv" destination="PdN-ht-K40" id="JyT-Pd-wVa"/>
+                <outlet property="superstarsLabel" destination="6qa-L0-ewX" id="b9Y-Rm-k37"/>
+            </connections>
+            <point key="canvasLocation" x="-85.507246376811594" y="-29.799107142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="me" width="86.5" height="125"/>
+    </resources>
+</document>
