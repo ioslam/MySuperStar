@@ -17,6 +17,8 @@ class SuperStarsVC: BaseVC {
         superstarsCollectionView.dataSource = self
         superstarsCollectionView.register(UINib(nibName: "SuperStarsCell", bundle: nil), forCellWithReuseIdentifier: cell_ID)
     }
+
+    
 } // End of Class SuperStars
 
 extension SuperStarsVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

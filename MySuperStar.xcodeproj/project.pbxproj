@@ -17,6 +17,9 @@
 		AAABAC9B23B1FB1500C7BAA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAABAC9A23B1FB1500C7BAA6 /* Assets.xcassets */; };
 		AAABAC9E23B1FB1500C7BAA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAABAC9C23B1FB1500C7BAA6 /* LaunchScreen.storyboard */; };
 		AAABACAA23B2003900C7BAA6 /* SuperStarsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAABACA923B2003900C7BAA6 /* SuperStarsVC.swift */; };
+		AAAE659C23B2C066004C6DB0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAE659B23B2C066004C6DB0 /* Reachability.swift */; };
+		AAAE659F23B2C0DC004C6DB0 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAE659E23B2C0DC004C6DB0 /* URLs.swift */; };
+		AAAE65A223B2E4CF004C6DB0 /* PopularPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAE65A123B2E4CF004C6DB0 /* PopularPeople.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		AAABAC9D23B1FB1500C7BAA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAABAC9F23B1FB1500C7BAA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAABACA923B2003900C7BAA6 /* SuperStarsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperStarsVC.swift; sourceTree = "<group>"; };
+		AAAE659B23B2C066004C6DB0 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		AAAE659E23B2C0DC004C6DB0 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		AAAE65A123B2E4CF004C6DB0 /* PopularPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPeople.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,7 @@
 		AAABAC9023B1FB1400C7BAA6 /* MySuperStar */ = {
 			isa = PBXGroup;
 			children = (
+				AAAE659A23B2C01E004C6DB0 /* Connectivity */,
 				AAABACAB23B2011300C7BAA6 /* DataServices */,
 				AAABACA523B1FDD000C7BAA6 /* Models */,
 				AAABACA623B1FDDD00C7BAA6 /* Controllers */,
@@ -97,6 +104,7 @@
 		AAABACA523B1FDD000C7BAA6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AAAE65A023B2C3C4004C6DB0 /* DTO */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -131,8 +139,33 @@
 		AAABACAB23B2011300C7BAA6 /* DataServices */ = {
 			isa = PBXGroup;
 			children = (
+				AAAE659D23B2C0B0004C6DB0 /* EndPointConstants */,
 			);
 			path = DataServices;
+			sourceTree = "<group>";
+		};
+		AAAE659A23B2C01E004C6DB0 /* Connectivity */ = {
+			isa = PBXGroup;
+			children = (
+				AAAE659B23B2C066004C6DB0 /* Reachability.swift */,
+			);
+			path = Connectivity;
+			sourceTree = "<group>";
+		};
+		AAAE659D23B2C0B0004C6DB0 /* EndPointConstants */ = {
+			isa = PBXGroup;
+			children = (
+				AAAE659E23B2C0DC004C6DB0 /* URLs.swift */,
+			);
+			path = EndPointConstants;
+			sourceTree = "<group>";
+		};
+		AAAE65A023B2C3C4004C6DB0 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				AAAE65A123B2E4CF004C6DB0 /* PopularPeople.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,8 +243,11 @@
 			files = (
 				AAABAC9623B1FB1400C7BAA6 /* ViewController.swift in Sources */,
 				AAABAC9223B1FB1400C7BAA6 /* AppDelegate.swift in Sources */,
+				AAAE659C23B2C066004C6DB0 /* Reachability.swift in Sources */,
+				AAAE659F23B2C0DC004C6DB0 /* URLs.swift in Sources */,
 				AAA90C4223B2165100F4E75D /* SuperStarsCell.swift in Sources */,
 				AAABACAA23B2003900C7BAA6 /* SuperStarsVC.swift in Sources */,
+				AAAE65A223B2E4CF004C6DB0 /* PopularPeople.swift in Sources */,
 				AAABAC9423B1FB1400C7BAA6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
