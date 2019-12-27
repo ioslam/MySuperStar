@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA2B3C0A23B51F8B0084CD7C /* PopularPeopleDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2B3C0923B51F8B0084CD7C /* PopularPeopleDataProvider.swift */; };
+		AA58872C23B58B0A006504B4 /* SuperStarsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA58872B23B58B0A006504B4 /* SuperStarsCell.swift */; };
 		AAA90C3C23B203B700F4E75D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAA90C3B23B203B600F4E75D /* Images.xcassets */; };
-		AAA90C4223B2165100F4E75D /* SuperStarsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA90C4023B2165100F4E75D /* SuperStarsCell.swift */; };
 		AAA90C4323B2165100F4E75D /* SuperStarsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAA90C4123B2165100F4E75D /* SuperStarsCell.xib */; };
 		AAABAC9223B1FB1400C7BAA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAABAC9123B1FB1400C7BAA6 /* AppDelegate.swift */; };
 		AAABAC9423B1FB1400C7BAA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAABAC9323B1FB1400C7BAA6 /* SceneDelegate.swift */; };
@@ -20,11 +21,13 @@
 		AAAE659C23B2C066004C6DB0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAE659B23B2C066004C6DB0 /* Reachability.swift */; };
 		AAAE659F23B2C0DC004C6DB0 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAE659E23B2C0DC004C6DB0 /* URLs.swift */; };
 		AAAE65A223B2E4CF004C6DB0 /* PopularPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAE65A123B2E4CF004C6DB0 /* PopularPeople.swift */; };
+		AD42587CDB1A04644D42DB48 /* Pods_MySuperStar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B685C3FA7A3E8537948EF8 /* Pods_MySuperStar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA2B3C0923B51F8B0084CD7C /* PopularPeopleDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPeopleDataProvider.swift; sourceTree = "<group>"; };
+		AA58872B23B58B0A006504B4 /* SuperStarsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperStarsCell.swift; sourceTree = "<group>"; };
 		AAA90C3B23B203B600F4E75D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		AAA90C4023B2165100F4E75D /* SuperStarsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperStarsCell.swift; sourceTree = "<group>"; };
 		AAA90C4123B2165100F4E75D /* SuperStarsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuperStarsCell.xib; sourceTree = "<group>"; };
 		AAABAC8E23B1FB1400C7BAA6 /* MySuperStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySuperStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAABAC9123B1FB1400C7BAA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +41,9 @@
 		AAAE659B23B2C066004C6DB0 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		AAAE659E23B2C0DC004C6DB0 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		AAAE65A123B2E4CF004C6DB0 /* PopularPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPeople.swift; sourceTree = "<group>"; };
+		BE530C4B05CD0C16341A3213 /* Pods-MySuperStar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySuperStar.release.xcconfig"; path = "Target Support Files/Pods-MySuperStar/Pods-MySuperStar.release.xcconfig"; sourceTree = "<group>"; };
+		C0B685C3FA7A3E8537948EF8 /* Pods_MySuperStar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySuperStar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2BFD23EF3349ADE21129738 /* Pods-MySuperStar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySuperStar.debug.xcconfig"; path = "Target Support Files/Pods-MySuperStar/Pods-MySuperStar.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,28 +51,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD42587CDB1A04644D42DB48 /* Pods_MySuperStar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AAA90C3F23B215E200F4E75D /* Stars */ = {
+		4BCED7F5F335038474F00D4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2BFD23EF3349ADE21129738 /* Pods-MySuperStar.debug.xcconfig */,
+				BE530C4B05CD0C16341A3213 /* Pods-MySuperStar.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		714A2EED706DAD095A16FDED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0B685C3FA7A3E8537948EF8 /* Pods_MySuperStar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA2B3C0823B51F340084CD7C /* PopularPeopleDataServices */ = {
+			isa = PBXGroup;
+			children = (
+				AA2B3C0923B51F8B0084CD7C /* PopularPeopleDataProvider.swift */,
+			);
+			path = PopularPeopleDataServices;
+			sourceTree = "<group>";
+		};
+		AAA90C4423B2166000F4E75D /* SuperStarsVC */ = {
 			isa = PBXGroup;
 			children = (
 				AAABACA923B2003900C7BAA6 /* SuperStarsVC.swift */,
-				AAA90C4423B2166000F4E75D /* SuperStarsCell */,
-			);
-			path = Stars;
-			sourceTree = "<group>";
-		};
-		AAA90C4423B2166000F4E75D /* SuperStarsCell */ = {
-			isa = PBXGroup;
-			children = (
-				AAA90C4023B2165100F4E75D /* SuperStarsCell.swift */,
+				AA58872B23B58B0A006504B4 /* SuperStarsCell.swift */,
 				AAA90C4123B2165100F4E75D /* SuperStarsCell.xib */,
 			);
-			path = SuperStarsCell;
+			path = SuperStarsVC;
 			sourceTree = "<group>";
 		};
 		AAABAC8523B1FB1400C7BAA6 = {
@@ -74,6 +98,8 @@
 			children = (
 				AAABAC9023B1FB1400C7BAA6 /* MySuperStar */,
 				AAABAC8F23B1FB1400C7BAA6 /* Products */,
+				4BCED7F5F335038474F00D4F /* Pods */,
+				714A2EED706DAD095A16FDED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,15 +114,15 @@
 		AAABAC9023B1FB1400C7BAA6 /* MySuperStar */ = {
 			isa = PBXGroup;
 			children = (
+				AAABAC9123B1FB1400C7BAA6 /* AppDelegate.swift */,
+				AAABAC9323B1FB1400C7BAA6 /* SceneDelegate.swift */,
+				AAABAC9F23B1FB1500C7BAA6 /* Info.plist */,
 				AAAE659A23B2C01E004C6DB0 /* Connectivity */,
 				AAABACAB23B2011300C7BAA6 /* DataServices */,
 				AAABACA523B1FDD000C7BAA6 /* Models */,
 				AAABACA623B1FDDD00C7BAA6 /* Controllers */,
 				AAABACA723B1FE0600C7BAA6 /* Views */,
 				AAABACA823B1FE5200C7BAA6 /* Supporting Files */,
-				AAABAC9123B1FB1400C7BAA6 /* AppDelegate.swift */,
-				AAABAC9C23B1FB1500C7BAA6 /* LaunchScreen.storyboard */,
-				AAABAC9F23B1FB1500C7BAA6 /* Info.plist */,
 			);
 			path = MySuperStar;
 			sourceTree = "<group>";
@@ -113,7 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				AAABAC9523B1FB1400C7BAA6 /* ViewController.swift */,
-				AAA90C3F23B215E200F4E75D /* Stars */,
+				AAA90C4423B2166000F4E75D /* SuperStarsVC */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -122,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				AAABAC9723B1FB1400C7BAA6 /* Main.storyboard */,
-				AAABAC9323B1FB1400C7BAA6 /* SceneDelegate.swift */,
+				AAABAC9C23B1FB1500C7BAA6 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -140,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				AAAE659D23B2C0B0004C6DB0 /* EndPointConstants */,
+				AA2B3C0823B51F340084CD7C /* PopularPeopleDataServices */,
 			);
 			path = DataServices;
 			sourceTree = "<group>";
@@ -175,9 +202,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AAABACA223B1FB1500C7BAA6 /* Build configuration list for PBXNativeTarget "MySuperStar" */;
 			buildPhases = (
+				EA06257EF3A16A82E0D35B1A /* [CP] Check Pods Manifest.lock */,
 				AAABAC8A23B1FB1400C7BAA6 /* Sources */,
 				AAABAC8B23B1FB1400C7BAA6 /* Frameworks */,
 				AAABAC8C23B1FB1400C7BAA6 /* Resources */,
+				79855671A1B244DAE15E1FE0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,6 +265,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		79855671A1B244DAE15E1FE0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MySuperStar/Pods-MySuperStar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MySuperStar/Pods-MySuperStar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MySuperStar/Pods-MySuperStar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA06257EF3A16A82E0D35B1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MySuperStar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AAABAC8A23B1FB1400C7BAA6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -245,10 +316,11 @@
 				AAABAC9223B1FB1400C7BAA6 /* AppDelegate.swift in Sources */,
 				AAAE659C23B2C066004C6DB0 /* Reachability.swift in Sources */,
 				AAAE659F23B2C0DC004C6DB0 /* URLs.swift in Sources */,
-				AAA90C4223B2165100F4E75D /* SuperStarsCell.swift in Sources */,
+				AA2B3C0A23B51F8B0084CD7C /* PopularPeopleDataProvider.swift in Sources */,
 				AAABACAA23B2003900C7BAA6 /* SuperStarsVC.swift in Sources */,
 				AAAE65A223B2E4CF004C6DB0 /* PopularPeople.swift in Sources */,
 				AAABAC9423B1FB1400C7BAA6 /* SceneDelegate.swift in Sources */,
+				AA58872C23B58B0A006504B4 /* SuperStarsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +462,7 @@
 		};
 		AAABACA323B1FB1500C7BAA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2BFD23EF3349ADE21129738 /* Pods-MySuperStar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -409,6 +482,7 @@
 		};
 		AAABACA423B1FB1500C7BAA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE530C4B05CD0C16341A3213 /* Pods-MySuperStar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
