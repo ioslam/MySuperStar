@@ -35,7 +35,7 @@ class SuperStarsVC: BaseVC {
     }
 } // End of Class SuperStars
 
-extension SuperStarsVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension SuperStarsVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return results?.count ?? 1
@@ -53,14 +53,21 @@ extension SuperStarsVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
         cell.knownForLabel.text = knownFor
         return cell
     }
+} // End OF DataSource
 
+extension SuperStarsVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (superstarsCollectionView.frame.size.width - 30 ) / 2
         let height = CGFloat(230)
         return CGSize(width: width, height: height)
     }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       let storyboard = UIStoryboard(name: "Main", bundle: nil)
+       let VC = storyboard.instantiateViewController(withIdentifier: "detailsVC") as! DetailsVC
+       present(VC, animated: true, completion: nil)
     }
 }
