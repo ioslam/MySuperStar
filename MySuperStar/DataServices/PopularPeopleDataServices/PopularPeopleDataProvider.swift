@@ -22,4 +22,16 @@ class PopularPeopleDataProvider {
             }
         }
     }
+    
+    class func getPopularPeopleDetails(_ person_id: Int?, completion: @escaping (_ error: Error?,_ details: Details?) -> ()) {
+        Alamofire.request(URLs.DetailBaseURL).responseJSON { (response) in
+            do {
+                let jsonDecoder = try JSONDecoder().decode(Details.self, from: response.data! )
+                completion(nil, jsonDecoder )
+            } catch {
+                print(error)
+                completion(error, nil )
+            }
+        }
+    }
 }

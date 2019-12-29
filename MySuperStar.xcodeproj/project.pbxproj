@@ -21,6 +21,9 @@
 		AAAE659C23B2C066004C6DB0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAE659B23B2C066004C6DB0 /* Reachability.swift */; };
 		AAAE659F23B2C0DC004C6DB0 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAE659E23B2C0DC004C6DB0 /* URLs.swift */; };
 		AAAE65A223B2E4CF004C6DB0 /* PopularPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAE65A123B2E4CF004C6DB0 /* PopularPeople.swift */; };
+		AAB1407123B7F74200B61B5E /* DetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1406F23B7F74200B61B5E /* DetailsCollectionViewCell.swift */; };
+		AAB1407223B7F74200B61B5E /* DetailsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB1407023B7F74200B61B5E /* DetailsCollectionViewCell.xib */; };
+		AAB1407423B8231900B61B5E /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1407323B8231900B61B5E /* Details.swift */; };
 		AAB38EA023B6B05A00B6A57C /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB38E9F23B6B05A00B6A57C /* DetailsVC.swift */; };
 		AD42587CDB1A04644D42DB48 /* Pods_MySuperStar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B685C3FA7A3E8537948EF8 /* Pods_MySuperStar.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +45,9 @@
 		AAAE659B23B2C066004C6DB0 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		AAAE659E23B2C0DC004C6DB0 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		AAAE65A123B2E4CF004C6DB0 /* PopularPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPeople.swift; sourceTree = "<group>"; };
+		AAB1406F23B7F74200B61B5E /* DetailsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCollectionViewCell.swift; sourceTree = "<group>"; };
+		AAB1407023B7F74200B61B5E /* DetailsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsCollectionViewCell.xib; sourceTree = "<group>"; };
+		AAB1407323B8231900B61B5E /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
 		AAB38E9F23B6B05A00B6A57C /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		BE530C4B05CD0C16341A3213 /* Pods-MySuperStar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySuperStar.release.xcconfig"; path = "Target Support Files/Pods-MySuperStar/Pods-MySuperStar.release.xcconfig"; sourceTree = "<group>"; };
 		C0B685C3FA7A3E8537948EF8 /* Pods_MySuperStar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySuperStar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				AAAE65A123B2E4CF004C6DB0 /* PopularPeople.swift */,
+				AAB1407323B8231900B61B5E /* Details.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -202,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				AAB38E9F23B6B05A00B6A57C /* DetailsVC.swift */,
+				AAB1406F23B7F74200B61B5E /* DetailsCollectionViewCell.swift */,
+				AAB1407023B7F74200B61B5E /* DetailsCollectionViewCell.xib */,
 			);
 			path = DetailsVC;
 			sourceTree = "<group>";
@@ -271,6 +280,7 @@
 				AAA90C3C23B203B700F4E75D /* Images.xcassets in Resources */,
 				AAABAC9B23B1FB1500C7BAA6 /* Assets.xcassets in Resources */,
 				AAABAC9923B1FB1400C7BAA6 /* Main.storyboard in Resources */,
+				AAB1407223B7F74200B61B5E /* DetailsCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +334,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAABAC9623B1FB1400C7BAA6 /* BaseVC.swift in Sources */,
+				AAB1407123B7F74200B61B5E /* DetailsCollectionViewCell.swift in Sources */,
+				AAB1407423B8231900B61B5E /* Details.swift in Sources */,
 				AAABAC9223B1FB1400C7BAA6 /* AppDelegate.swift in Sources */,
 				AAAE659C23B2C066004C6DB0 /* Reachability.swift in Sources */,
 				AAAE659F23B2C0DC004C6DB0 /* URLs.swift in Sources */,
@@ -480,7 +492,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 874WHJ22Z3;
 				INFOPLIST_FILE = MySuperStar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -500,7 +512,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 874WHJ22Z3;
 				INFOPLIST_FILE = MySuperStar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
