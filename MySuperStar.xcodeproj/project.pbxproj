@@ -26,6 +26,7 @@
 		AAB1407423B8231900B61B5E /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1407323B8231900B61B5E /* Details.swift */; };
 		AAB38EA023B6B05A00B6A57C /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB38E9F23B6B05A00B6A57C /* DetailsVC.swift */; };
 		AD42587CDB1A04644D42DB48 /* Pods_MySuperStar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B685C3FA7A3E8537948EF8 /* Pods_MySuperStar.framework */; };
+		EF7BDBE023BAB8D400D0B41C /* MovieCredits.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7BDBDF23BAB8D400D0B41C /* MovieCredits.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		AAB38E9F23B6B05A00B6A57C /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		BE530C4B05CD0C16341A3213 /* Pods-MySuperStar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySuperStar.release.xcconfig"; path = "Target Support Files/Pods-MySuperStar/Pods-MySuperStar.release.xcconfig"; sourceTree = "<group>"; };
 		C0B685C3FA7A3E8537948EF8 /* Pods_MySuperStar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySuperStar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF7BDBDF23BAB8D400D0B41C /* MovieCredits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCredits.swift; sourceTree = "<group>"; };
 		F2BFD23EF3349ADE21129738 /* Pods-MySuperStar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySuperStar.debug.xcconfig"; path = "Target Support Files/Pods-MySuperStar/Pods-MySuperStar.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -201,6 +203,7 @@
 			children = (
 				AAAE65A123B2E4CF004C6DB0 /* PopularPeople.swift */,
 				AAB1407323B8231900B61B5E /* Details.swift */,
+				EF7BDBDF23BAB8D400D0B41C /* MovieCredits.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				AAB1407123B7F74200B61B5E /* DetailsCollectionViewCell.swift in Sources */,
 				AAB1407423B8231900B61B5E /* Details.swift in Sources */,
 				AAABAC9223B1FB1400C7BAA6 /* AppDelegate.swift in Sources */,
+				EF7BDBE023BAB8D400D0B41C /* MovieCredits.swift in Sources */,
 				AAAE659C23B2C066004C6DB0 /* Reachability.swift in Sources */,
 				AAAE659F23B2C0DC004C6DB0 /* URLs.swift in Sources */,
 				AA2B3C0A23B51F8B0084CD7C /* PopularPeopleDataProvider.swift in Sources */,
@@ -497,7 +501,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lomaboc.com.MySuperStar;
+				PRODUCT_BUNDLE_IDENTIFIER = lodex1.com.MySuperStar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -509,6 +513,7 @@
 			baseConfigurationReference = BE530C4B05CD0C16341A3213 /* Pods-MySuperStar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 874WHJ22Z3;
 				INFOPLIST_FILE = MySuperStar/Info.plist;
@@ -517,8 +522,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lomaboc.com.MySuperStar;
+				PRODUCT_BUNDLE_IDENTIFIER = lodex1.com.MySuperStar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

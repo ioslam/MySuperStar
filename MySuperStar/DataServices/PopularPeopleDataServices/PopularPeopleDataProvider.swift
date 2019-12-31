@@ -23,8 +23,9 @@ class PopularPeopleDataProvider {
         }
     }
     
-    class func getPopularPeopleDetails(_ person_id: Int?, completion: @escaping (_ error: Error?,_ details: Details?) -> ()) {
-        Alamofire.request(URLs.DetailBaseURL).responseJSON { (response) in
+    class func getPopularPeopleDetails(person_id: Int, completion: @escaping (_ error: Error?,_ details: Details?) -> ()) {
+        let url = URLs.DetailBaseURL + String(person_id) + URLs.DetailEndURL
+        Alamofire.request(url).responseJSON { (response) in
             do {
                 let jsonDecoder = try JSONDecoder().decode(Details.self, from: response.data! )
                 completion(nil, jsonDecoder )
@@ -34,4 +35,16 @@ class PopularPeopleDataProvider {
             }
         }
     }
+    class func getMovieCredits(person_id: Int , completion: @escaping (_ movieCredits: MovieCredits?)-> ()) {
+        let url = URLs.MovieCreditsBaseURL + String(person_id) + URLs.MovieCreditsEndURL
+        Alamofire.request(url).responseJSON { (movieCredits) in
+            do {
+                let jsonDecoder = try JSONDecoder().decode(MovieCredits.self, from: movieCredits.data!)
+                completion(jsonDecoder)
+                print(jsonDecoder)
+            } catch {
+            }
+        }
+    }
+    
 }

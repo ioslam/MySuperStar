@@ -59,7 +59,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QWc-1e-65o" userLabel="Over View">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="demo2" translatesAutoresizingMaskIntoConstraints="NO" id="XhL-ou-V9P">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhL-ou-V9P">
                                         <rect key="frame" x="100" y="0.0" width="198" height="205"/>
                                         <color key="backgroundColor" red="0.050980392156862744" green="0.050980392156862744" blue="0.050980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -275,6 +275,7 @@
                         <outlet property="gender_label" destination="rD0-ch-lQT" id="lso-Lh-FUF"/>
                         <outlet property="iv" destination="XhL-ou-V9P" id="EGv-Cu-817"/>
                         <outlet property="name_label" destination="arN-d7-bBk" id="MnU-R9-a4L"/>
+                        <outlet property="navBar" destination="an8-Ug-yGU" id="Dyw-di-lmv"/>
                         <outlet property="placeOfBirth_label" destination="Ev8-gi-rgK" id="ghH-Da-yHS"/>
                         <outlet property="relatedMoviesCollectionView" destination="EqZ-Cn-isM" id="7N6-1n-JkG"/>
                     </connections>
@@ -348,7 +349,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="demo2" width="250" height="375"/>
         <image name="star" catalog="system" width="64" height="58"/>
         <image name="star.fill" catalog="system" width="64" height="58"/>
         <image name="tv" catalog="system" width="64" height="46"/>

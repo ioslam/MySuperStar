@@ -12,7 +12,7 @@ class URLs {
     
     ///mark:- API_Key
     static let API_Key = "5d3fa758ba1c2690af9c4455aa75790e"
-
+    
     ///mark:- Popular People URL, takes 3 parameters(API_Key, Language, Page)
     static let PopularPeopleURL = "https://api.themoviedb.org/3/person/popular?api_key=" + URLs.API_Key + "&language=en-US&page="
     

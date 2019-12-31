@@ -19,11 +19,14 @@ struct PopularPeople: Codable {
 
 // MARK: - Result
 struct Result: Codable {
+   
+   
     var knownForDepartment,name ,profilePath: String?
-    var  id: Int?
+     var  id: Int?
     var knownFor: [KnownFor]?
     
     enum CodingKeys: String, CodingKey {
+        case id
         case knownForDepartment = "known_for_department"
         case profilePath = "profile_path"
         case knownFor = "known_for"

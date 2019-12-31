@@ -66,8 +66,10 @@ extension SuperStarsVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLa
         return UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let result = self.results![indexPath.row]
        let storyboard = UIStoryboard(name: "Main", bundle: nil)
        let VC = storyboard.instantiateViewController(withIdentifier: "detailsVC") as! DetailsVC
+        VC.results = result
        present(VC, animated: true, completion: nil)
     }
 }

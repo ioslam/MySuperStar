@@ -4,16 +4,18 @@
 //
 //  Created by Eslam on 12/27/19.
 //  Copyright © 2019 Eslam. All rights reserved.
-//
 
-import Foundation
+import Kingfisher
 import UIKit
 
 class DetailsVC: BaseVC {
     // Declare vars
     let cell_ID = "detailsCell"
     var results: Result?
+    var details: Details?
+    var movieCredits: MovieCredits?
     // set UIoutlet
+    @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var iv: UIImageView!
     @IBOutlet weak var biograghy_label: UILabel!
     @IBOutlet weak var superView: UIView!
@@ -36,27 +38,65 @@ class DetailsVC: BaseVC {
         relatedMoviesCollectionView.delegate = self
         relatedMoviesCollectionView.dataSource = self
         relatedMoviesCollectionView.register(UINib(nibName: "DetailsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "detailsCell")
+        navBar.topItem?.title = results?.name ?? "Unknown"
+        fetchData()
     }
     
+    func fetchData() {
+        
+        PopularPeopleDataProvider.getPopularPeopleDetails(person_id: results?.id ?? 5) { (error, details) in
+            self.details = details
+            self.dispalyImage(imageUrl: details?.profile_path ?? "150")
+            self.dispalyData(details: details)
+        }
+    }
+    
+    func dispalyData(details: Details?) {
+        name_label.text = details?.name
+        birthday_label.text = details?.birthday
+        biograghy_label.text = details?.biography
+        placeOfBirth_label.text = details?.place_of_birth
+        if details?.gender == 2 {
+            gender_label.text = "Male"
+        } else {
+            gender_label.text = "Female"
+        }
+        displayMovies()
+    }
+    
+    func dispalyImage(imageUrl: String) {
+        let url = URL(string: URLs.ImageRequestURL + imageUrl)
+        self.iv.kf.indicatorType = .activity
+        self.iv.kf.setImage(with: url, placeholder: UIImage(named: "placeholder"), options: [.transition(ImageTransition.flipFromTop(0.5))], progressBlock: nil, completionHandler: nil)
+    }
+    func displayMovies() {
+        PopularPeopleDataProvider.getMovieCredits(person_id: results?.id ?? 5) { (movie_Credits) in
+            self.movieCredits = movie_Credits
+            self.relatedMoviesCollectionView.reloadData()
+
+        }
+    }
 } // End of Class
 
 extension DetailsVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return self.movieCredits?.cast.count ?? 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cell_ID, for: indexPath) as? DetailsCollectionViewCell else { return UICollectionViewCell() }
+        cell.displayImg(URLString: movieCredits?.cast[indexPath.row].poster_path ?? "")
         return cell
     }
 }
+
 extension DetailsVC : UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
            let height = CGFloat(157)
-           return CGSize(width: 120, height: height)
+           return CGSize(width: 118, height: height)
        }
        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-           return UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+           return UIEdgeInsets(top: 0, left: 3, bottom: 0, right: 2)
        }
        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
           let storyboard = UIStoryboard(name: "Main", bundle: nil)
