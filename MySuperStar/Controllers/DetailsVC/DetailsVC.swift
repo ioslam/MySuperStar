@@ -14,6 +14,7 @@ class DetailsVC: BaseVC {
     var results: Result?
     var details: Details?
     var movieCredits: MovieCredits?
+    
     // set UIoutlet
     // Popup IBOutlets
     @IBOutlet weak var popUpHeight: NSLayoutConstraint!
@@ -101,7 +102,7 @@ class DetailsVC: BaseVC {
     
     func popupViewDispaly() {
        
-        popupVeiw.layer.cornerRadius = 5
+        popupVeiw.layer.cornerRadius = 6
         popUpHeight.constant = view.frame.size.height - (200)
         //let  x = view.frame.size.height - popupVeiw.frame.size.height
         PopupConst.constant = 100

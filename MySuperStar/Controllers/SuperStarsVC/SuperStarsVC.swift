@@ -8,19 +8,33 @@ class SuperStarsVC: BaseVC {
    
     var cell_ID = "superstarsCell"
     var results: [Result]? = []
+    lazy var refresher : UIRefreshControl = { () -> UIRefreshControl in
+        let ref = UIRefreshControl()
+        ref.addTarget(self, action: #selector(fetchDataResults), for: .valueChanged)
+        return ref
+    }()
+    
+    private var isloading = false
+    private var currentPage = 1
+    private var lastPage = 1
     @IBOutlet weak var superstarsCollectionView: UICollectionView!
     
     override func setupOutlets() {
         superstarsCollectionView.backgroundColor = .black
 //      superstarsCollectionView.bounces = false
         superstarsCollectionView.delegate = self
+        superstarsCollectionView.addSubview(refresher)
         superstarsCollectionView.dataSource = self
         superstarsCollectionView.register(UINib(nibName: "SuperStarsCell", bundle: nil), forCellWithReuseIdentifier: cell_ID)
         fetchDataResults()
     }
-    func fetchDataResults() {
+    
+   @objc func fetchDataResults() {
+    DispatchQueue.main.async {
+        self.refresher.endRefreshing()
+    }
         if Reachability.isConnectedToNetwork() {
-        PopularPeopleDataProvider.getPopularPeople { (error, PopularPeople) in
+        PopularPeopleDataProvider.getPopularPeople { (error, PopularPeople, last_page) in
             self.results = PopularPeople?.results
             self.superstarsCollectionView.reloadData()
         }
@@ -33,6 +47,7 @@ class SuperStarsVC: BaseVC {
             
         }
     }
+      
 } // End of Class SuperStars
 
 extension SuperStarsVC: UICollectionViewDataSource {
