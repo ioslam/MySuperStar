@@ -15,23 +15,36 @@ class DetailsVC: BaseVC {
     var details: Details?
     var movieCredits: MovieCredits?
     // set UIoutlet
+    // Popup IBOutlets
+    @IBOutlet weak var popUpHeight: NSLayoutConstraint!
+    @IBOutlet weak var popupVeiw: UIView!
+    @IBOutlet weak var PopupConst: NSLayoutConstraint!
+    @IBOutlet weak var popTextField: UITextView!
+    
+    @IBOutlet weak var superView: UIView!
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var iv: UIImageView!
     @IBOutlet weak var biograghy_label: UILabel!
-    @IBOutlet weak var superView: UIView!
     @IBOutlet weak var name_label: UILabel!
     @IBOutlet weak var subView: UIView!
     @IBOutlet weak var gender_label: UILabel!
     @IBOutlet weak var birthday_label: UILabel!
     @IBOutlet weak var placeOfBirth_label: UILabel!
     @IBOutlet weak var relatedMoviesCollectionView: UICollectionView!
-    // Button Pressed
+    
+    // Buttons Pressed
     @IBAction func backBtnPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func seeMorePressed(_ sender: Any) {
-        
+       popupViewDispaly()
     }
+    @IBAction func closePopupPressed(_ sender: Any) {
+        PopupConst.constant = -500
+        superView.alpha = 1
+
+    }
+    
     // Main Method
     override func setupOutlets() {
         
@@ -52,14 +65,22 @@ class DetailsVC: BaseVC {
     }
     
     func dispalyData(details: Details?) {
-        name_label.text = details?.name
-        birthday_label.text = details?.birthday
-        biograghy_label.text = details?.biography
-        placeOfBirth_label.text = details?.place_of_birth
+        
+        name_label.text = details?.name ?? "Unknown"
+        birthday_label.text = details?.birthday ?? "Unavailable"
+        biograghy_label.text = details?.biography ?? "No data Available"
+        placeOfBirth_label.text = details?.place_of_birth ?? "--"
         if details?.gender == 2 {
             gender_label.text = "Male"
         } else {
             gender_label.text = "Female"
+        }
+        if details?.biography?.isEmpty == true {
+            popTextField.text = "No data Available"
+            biograghy_label.text = "No data Available"
+        } else {
+            popTextField.text = details?.biography
+            biograghy_label.text = details?.biography
         }
         displayMovies()
     }
@@ -69,12 +90,22 @@ class DetailsVC: BaseVC {
         self.iv.kf.indicatorType = .activity
         self.iv.kf.setImage(with: url, placeholder: UIImage(named: "placeholder"), options: [.transition(ImageTransition.flipFromTop(0.5))], progressBlock: nil, completionHandler: nil)
     }
+    
     func displayMovies() {
         PopularPeopleDataProvider.getMovieCredits(person_id: results?.id ?? 5) { (movie_Credits) in
             self.movieCredits = movie_Credits
             self.relatedMoviesCollectionView.reloadData()
 
         }
+    }
+    
+    func popupViewDispaly() {
+       
+        popupVeiw.layer.cornerRadius = 5
+        popUpHeight.constant = view.frame.size.height - (200)
+        //let  x = view.frame.size.height - popupVeiw.frame.size.height
+        PopupConst.constant = 100
+        superView.alpha = 0.5
     }
 } // End of Class
 

@@ -41,7 +41,6 @@ class PopularPeopleDataProvider {
             do {
                 let jsonDecoder = try JSONDecoder().decode(MovieCredits.self, from: movieCredits.data!)
                 completion(jsonDecoder)
-                print(jsonDecoder)
             } catch {
             }
         }
