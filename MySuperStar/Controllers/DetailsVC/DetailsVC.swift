@@ -17,17 +17,17 @@ class DetailsVC: BaseVC {
     
     // set UIoutlet
     // Popup IBOutlets
+   
     @IBOutlet weak var popUpHeight: NSLayoutConstraint!
     @IBOutlet weak var popupVeiw: UIView!
     @IBOutlet weak var PopupConst: NSLayoutConstraint!
     @IBOutlet weak var popTextField: UITextView!
+    @IBOutlet weak var backgroundButton: UIButton!
     
-    @IBOutlet weak var superView: UIView!
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var iv: UIImageView!
     @IBOutlet weak var biograghy_label: UILabel!
     @IBOutlet weak var name_label: UILabel!
-    @IBOutlet weak var subView: UIView!
     @IBOutlet weak var gender_label: UILabel!
     @IBOutlet weak var birthday_label: UILabel!
     @IBOutlet weak var placeOfBirth_label: UILabel!
@@ -41,11 +41,25 @@ class DetailsVC: BaseVC {
        popupViewDispaly()
     }
     @IBAction func closePopupPressed(_ sender: Any) {
-        PopupConst.constant = -1000
-        superView.alpha = 1
-
+        
+        self.PopupConst.constant = -1000
+        UIView.animate(withDuration: 0.5) {
+            self.view.layoutIfNeeded()
+            self.backgroundButton.alpha = 0
+        }
     }
-    
+    func popupViewDispaly() {
+        self.popupVeiw.layer.cornerRadius = 6
+        self.popUpHeight.constant = self.view.frame.size.height - (300)
+        self.PopupConst.constant = 100
+        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
+            self.view.layoutIfNeeded()
+            
+        }, completion: nil)
+        UIView.animate(withDuration: 0.5) {
+            self.backgroundButton.alpha = 0.5
+        }
+    }
     // Main Method
     override func setupOutlets() {
         
@@ -99,15 +113,6 @@ class DetailsVC: BaseVC {
 
         }
     }
-    
-    func popupViewDispaly() {
-       
-        popupVeiw.layer.cornerRadius = 6
-        popUpHeight.constant = view.frame.size.height - (300)
-        //let  x = view.frame.size.height - popupVeiw.frame.size.height
-        PopupConst.constant = 100
-        superView.alpha = 0.5
-    }
 } // End of Class
 
 extension DetailsVC: UICollectionViewDataSource {
@@ -123,16 +128,19 @@ extension DetailsVC: UICollectionViewDataSource {
 }
 
 extension DetailsVC : UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-           let height = CGFloat(157)
-           return CGSize(width: 118, height: height)
-       }
-       func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-           return UIEdgeInsets(top: 0, left: 3, bottom: 0, right: 2)
-       }
-       func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-          let storyboard = UIStoryboard(name: "Main", bundle: nil)
-          let VC = storyboard.instantiateViewController(withIdentifier: "detailsVC") as! DetailsVC
-          present(VC, animated: true, completion: nil)
-       }
+        let height = CGFloat(157)
+        return CGSize(width: 118, height: height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 3, bottom: 0, right: 2)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let VC = storyboard.instantiateViewController(withIdentifier: "detailsVC") as! DetailsVC
+        present(VC, animated: true, completion: nil)
+    }
 }
