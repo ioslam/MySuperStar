@@ -17,11 +17,11 @@ class SuperStarsVC: BaseVC {
     private var isloading = false
     private var currentPage = 1
     private var lastPage = 1
+    
     @IBOutlet weak var superstarsCollectionView: UICollectionView!
     
     override func setupOutlets() {
         superstarsCollectionView.backgroundColor = .black
-//      superstarsCollectionView.bounces = false
         superstarsCollectionView.delegate = self
         superstarsCollectionView.addSubview(refresher)
         superstarsCollectionView.dataSource = self
@@ -30,21 +30,46 @@ class SuperStarsVC: BaseVC {
     }
     
    @objc func fetchDataResults() {
-    DispatchQueue.main.async {
-        self.refresher.endRefreshing()
+        
+ if Reachability.isConnectedToNetwork(){
+                    DispatchQueue.main.async {
+                        self.refresher.endRefreshing()
+                    }
+                    guard !isloading else {return}
+                    isloading = true
+    PopularPeopleDataProvider.getPopularPeople { (error,popularPeoples, lastPage) in
+                        
+                        self.results = popularPeoples?.results
+                        self.isloading = false
+                        self.superstarsCollectionView.reloadData()
+                        self.currentPage = 1
+                        self.lastPage = lastPage
+                    }
+                }else{
+                    
+                    let alert = UIAlertController(title: "Error", message: "No internet connection", preferredStyle: .alert)
+                    let cancel = UIAlertAction(title: "Ok", style: .cancel) { (UIAlertAction) in
+                        print("No internet connection")
+                    }
+                    alert.addAction(cancel)
+                    present(alert, animated: true, completion: nil)
+                }
     }
-        if Reachability.isConnectedToNetwork() {
-        PopularPeopleDataProvider.getPopularPeople { (error, PopularPeople, last_page) in
-            self.results = PopularPeople?.results
-            self.superstarsCollectionView.reloadData()
-        }
-        } else {
-            let alert = UIAlertController(title: "Something went Wrong", message: "No Internet Connection", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .cancel) { (UIAlertAction) in
-            }
-            alert.addAction(action)
-            present(alert, animated: true, completion: nil  )
+    
+    fileprivate func loadMore(){
+        
+        guard !isloading else {return}
+        guard currentPage < lastPage else {return}
+        isloading = true
+        PopularPeopleDataProvider.getPopularPeople(page: currentPage+1) { (error, popularPeoples, lastPage) in
             
+            for data in popularPeoples!.results {
+                self.results?.append(data)
+            }
+            self.isloading = false
+            self.superstarsCollectionView.reloadData()
+            self.currentPage += 1
+            self.lastPage = lastPage
         }
     }
       
@@ -53,7 +78,7 @@ class SuperStarsVC: BaseVC {
 extension SuperStarsVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return results?.count ?? 1
+        return results?.count ?? 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -86,5 +111,13 @@ extension SuperStarsVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLa
        let VC = storyboard.instantiateViewController(withIdentifier: "detailsVC") as! DetailsVC
         VC.results = result
        present(VC, animated: true, completion: nil)
+    }
+ func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        let count = self.results?.count
+        if indexPath.row == count!-1{
+            //load more
+            self.loadMore()
+        }
     }
 }

@@ -254,7 +254,7 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cO7-7K-OHh" userLabel="PopUp View">
-                                <rect key="frame" x="10" y="867" width="355" height="300"/>
+                                <rect key="frame" x="10" y="1567" width="355" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmq-st-8PJ">
                                         <rect key="frame" x="332" y="4" width="20" height="17.5"/>
@@ -273,7 +273,7 @@
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, " textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afc-LR-odQ">
-                                        <rect key="frame" x="0.0" y="30" width="355" height="270"/>
+                                        <rect key="frame" x="0.0" y="30" width="355" height="70"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -282,7 +282,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.090196078431372548" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="21q-Xj-t8n"/>
+                                    <constraint firstAttribute="height" constant="100" id="21q-Xj-t8n"/>
                                     <constraint firstAttribute="trailing" secondItem="afc-LR-odQ" secondAttribute="trailing" id="BGB-fb-fMw"/>
                                     <constraint firstAttribute="trailing" secondItem="lmq-st-8PJ" secondAttribute="trailing" constant="3" id="BJt-hT-6LO"/>
                                     <constraint firstAttribute="bottom" secondItem="afc-LR-odQ" secondAttribute="bottom" id="Sj0-Uh-BaA"/>
@@ -302,7 +302,7 @@
                             <constraint firstItem="cO7-7K-OHh" firstAttribute="leading" secondItem="z2Z-ZY-CgB" secondAttribute="leading" constant="10" id="Vt4-pg-qTs"/>
                             <constraint firstAttribute="trailing" secondItem="cO7-7K-OHh" secondAttribute="trailing" constant="10" id="Xep-ev-Ib6"/>
                             <constraint firstItem="cO7-7K-OHh" firstAttribute="centerX" secondItem="z2Z-ZY-CgB" secondAttribute="centerX" id="bdy-g5-UIk"/>
-                            <constraint firstItem="RTP-70-eWG" firstAttribute="bottom" secondItem="cO7-7K-OHh" secondAttribute="bottom" constant="-500" id="dTS-Yt-bjk"/>
+                            <constraint firstItem="RTP-70-eWG" firstAttribute="bottom" secondItem="cO7-7K-OHh" secondAttribute="bottom" constant="-1000" id="dTS-Yt-bjk"/>
                             <constraint firstItem="QWc-1e-65o" firstAttribute="top" secondItem="an8-Ug-yGU" secondAttribute="bottom" symbolic="YES" id="ht6-5H-7cD"/>
                             <constraint firstItem="an8-Ug-yGU" firstAttribute="top" secondItem="RTP-70-eWG" secondAttribute="top" id="oN1-0p-QGj"/>
                         </constraints>

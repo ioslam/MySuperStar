@@ -41,7 +41,7 @@ class DetailsVC: BaseVC {
        popupViewDispaly()
     }
     @IBAction func closePopupPressed(_ sender: Any) {
-        PopupConst.constant = -500
+        PopupConst.constant = -1000
         superView.alpha = 1
 
     }
@@ -103,7 +103,7 @@ class DetailsVC: BaseVC {
     func popupViewDispaly() {
        
         popupVeiw.layer.cornerRadius = 6
-        popUpHeight.constant = view.frame.size.height - (200)
+        popUpHeight.constant = view.frame.size.height - (300)
         //let  x = view.frame.size.height - popupVeiw.frame.size.height
         PopupConst.constant = 100
         superView.alpha = 0.5

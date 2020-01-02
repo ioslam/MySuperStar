@@ -11,11 +11,16 @@ import Alamofire
 
 class PopularPeopleDataProvider {
     
-    class func getPopularPeople(page: Int = 1 ,completetion: @escaping (_ error: Error?,_ popularPeople: PopularPeople? , _ last_page: Int?) -> () ){
-        Alamofire.request(URLs.PopularPeopleURL).responseJSON { (response) in
+    class func getPopularPeople(page: Int = 1 ,completetion: @escaping (_ error: Error?,_ popularPeople: PopularPeople? , _ last_page: Int) -> () ){
+        Alamofire.request(URLs.PopularPeopleURL + String(page)).responseJSON { (response) in
             do {
             let jsonDecoder = try JSONDecoder().decode(PopularPeople.self, from: response.data!)
-                completetion(nil,jsonDecoder,jsonDecoder.totalPages)
+                var lastPage = Int()
+                
+                if let totalPages = jsonDecoder.totalPages {
+                    lastPage = totalPages
+                }
+                completetion(nil,jsonDecoder,lastPage)
             } catch {
                 print(error)
             }
