@@ -140,7 +140,10 @@ extension DetailsVC : UICollectionViewDelegate, UICollectionViewDelegateFlowLayo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let VC = storyboard.instantiateViewController(withIdentifier: "detailsVC") as! DetailsVC
-        present(VC, animated: true, completion: nil)
+        let VC = storyboard.instantiateViewController(withIdentifier: "castVC") as! CastVC
+        VC.cast = movieCredits?.cast[indexPath.row]
+        present(VC, animated: true, completion: ({
+            
+        }))
     }
 }

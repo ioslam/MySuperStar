@@ -49,5 +49,16 @@ class PopularPeopleDataProvider {
             }
         }
     }
+    class func getMovieDetails(movie_id: Int, completetion: @escaping(_ error: Error?,_ movies: Movies?) ->()){
+        let url = "https://api.themoviedb.org/3/movie/" + String(movie_id) + "?api_key=5d3fa758ba1c2690af9c4455aa75790e&language=en-US"
+        Alamofire.request(url).responseJSON { (response) in
+            do {
+            let jsonDecoder = try JSONDecoder().decode(Movies.self, from: response.data!)
+            completetion(nil,jsonDecoder)
+            } catch {
+                print("errrrror")
+            }
+        }
+    }
     
 }

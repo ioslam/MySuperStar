@@ -19,7 +19,7 @@ struct Cast: Codable {
     let id: Int
     let title: String
     let poster_path: String?
-//    let character: String?
+    let character: String?
 //    let credit_id: String
 //    let video: Bool
 //    let vote_count: Int
