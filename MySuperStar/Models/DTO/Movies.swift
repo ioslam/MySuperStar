@@ -21,6 +21,7 @@ struct Movies: Codable {
     let release_date: String?
     let revenue, runtime: Int?
     let status, title: String?
+    var backdrop_path : String?
 
 }
 

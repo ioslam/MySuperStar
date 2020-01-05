@@ -24,7 +24,7 @@ struct Cast: Codable {
 //    let video: Bool
 //    let vote_count: Int
 //    let adult: Bool
-//    let backdrop_path: String?
+    let backdrop_path: String?
 //    let genre_ids: [Int]
 //    let original_language: OriginalLanguage
 //    let original_title: String
