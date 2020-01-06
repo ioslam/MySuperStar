@@ -19,6 +19,11 @@ class SuperStarsVC: BaseVC {
     private var lastPage = 1
     
     @IBOutlet weak var superstarsCollectionView: UICollectionView!
+    @IBAction func searchButtonPressed(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "searchVC")
+        self.present(controller, animated: true, completion: nil)
+    }
     
     override func setupOutlets() {
         superstarsCollectionView.backgroundColor = .black
@@ -29,31 +34,31 @@ class SuperStarsVC: BaseVC {
         fetchDataResults()
     }
     
-   @objc func fetchDataResults() {
+    @objc func fetchDataResults() {
         
- if Reachability.isConnectedToNetwork(){
-                    DispatchQueue.main.async {
-                        self.refresher.endRefreshing()
-                    }
-                    guard !isloading else {return}
-                    isloading = true
-    PopularPeopleDataProvider.getPopularPeople { (error,popularPeoples, lastPage) in
-                        
-                        self.results = popularPeoples?.results
-                        self.isloading = false
-                        self.superstarsCollectionView.reloadData()
-                        self.currentPage = 1
-                        self.lastPage = lastPage
-                    }
-                }else{
-                    
-                    let alert = UIAlertController(title: "Error", message: "No internet connection", preferredStyle: .alert)
-                    let cancel = UIAlertAction(title: "Ok", style: .cancel) { (UIAlertAction) in
-                        print("No internet connection")
-                    }
-                    alert.addAction(cancel)
-                    present(alert, animated: true, completion: nil)
-                }
+        if Reachability.isConnectedToNetwork(){
+            DispatchQueue.main.async {
+                self.refresher.endRefreshing()
+            }
+            guard !isloading else {return}
+            isloading = true
+            PopularPeopleDataProvider.getPopularPeople { (error,popularPeoples, lastPage) in
+                
+                self.results = popularPeoples?.results
+                self.isloading = false
+                self.superstarsCollectionView.reloadData()
+                self.currentPage = 1
+                self.lastPage = lastPage
+            }
+        }else{
+            
+            let alert = UIAlertController(title: "Error", message: "No internet connection", preferredStyle: .alert)
+            let cancel = UIAlertAction(title: "Ok", style: .cancel) { (UIAlertAction) in
+                print("No internet connection")
+            }
+            alert.addAction(cancel)
+            present(alert, animated: true, completion: nil)
+        }
     }
     
     fileprivate func loadMore(){
@@ -72,7 +77,8 @@ class SuperStarsVC: BaseVC {
             self.lastPage = lastPage
         }
     }
-      
+
+    
 } // End of Class SuperStars
 
 extension SuperStarsVC: UICollectionViewDataSource {
