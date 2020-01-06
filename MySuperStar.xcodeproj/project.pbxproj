@@ -27,6 +27,9 @@
 		AAB1407223B7F74200B61B5E /* DetailsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB1407023B7F74200B61B5E /* DetailsCollectionViewCell.xib */; };
 		AAB1407423B8231900B61B5E /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1407323B8231900B61B5E /* Details.swift */; };
 		AAB38EA023B6B05A00B6A57C /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB38E9F23B6B05A00B6A57C /* DetailsVC.swift */; };
+		AAB5C80523C210560002D659 /* CastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB5C80323C210550002D659 /* CastCollectionViewCell.swift */; };
+		AAB5C80623C210560002D659 /* CastCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB5C80423C210550002D659 /* CastCollectionViewCell.xib */; };
+		AAB5C80823C297610002D659 /* MovieCrew.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB5C80723C297610002D659 /* MovieCrew.swift */; };
 		AD42587CDB1A04644D42DB48 /* Pods_MySuperStar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B685C3FA7A3E8537948EF8 /* Pods_MySuperStar.framework */; };
 		EF7BDBE023BAB8D400D0B41C /* MovieCredits.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7BDBDF23BAB8D400D0B41C /* MovieCredits.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +57,9 @@
 		AAB1407023B7F74200B61B5E /* DetailsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsCollectionViewCell.xib; sourceTree = "<group>"; };
 		AAB1407323B8231900B61B5E /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
 		AAB38E9F23B6B05A00B6A57C /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		AAB5C80323C210550002D659 /* CastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastCollectionViewCell.swift; sourceTree = "<group>"; };
+		AAB5C80423C210550002D659 /* CastCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastCollectionViewCell.xib; sourceTree = "<group>"; };
+		AAB5C80723C297610002D659 /* MovieCrew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCrew.swift; sourceTree = "<group>"; };
 		BE530C4B05CD0C16341A3213 /* Pods-MySuperStar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySuperStar.release.xcconfig"; path = "Target Support Files/Pods-MySuperStar/Pods-MySuperStar.release.xcconfig"; sourceTree = "<group>"; };
 		C0B685C3FA7A3E8537948EF8 /* Pods_MySuperStar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySuperStar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7BDBDF23BAB8D400D0B41C /* MovieCredits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCredits.swift; sourceTree = "<group>"; };
@@ -111,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				AAAB58ED23BE68E300B058C5 /* CastVC.swift */,
+				AAB5C80323C210550002D659 /* CastCollectionViewCell.swift */,
+				AAB5C80423C210550002D659 /* CastCollectionViewCell.xib */,
 			);
 			path = CastVC;
 			sourceTree = "<group>";
@@ -218,6 +226,7 @@
 				AAB1407323B8231900B61B5E /* Details.swift */,
 				AAAB58EF23BE9C4700B058C5 /* Movies.swift */,
 				EF7BDBDF23BAB8D400D0B41C /* MovieCredits.swift */,
+				AAB5C80723C297610002D659 /* MovieCrew.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -297,6 +306,7 @@
 				AAA90C3C23B203B700F4E75D /* Images.xcassets in Resources */,
 				AAABAC9B23B1FB1500C7BAA6 /* Assets.xcassets in Resources */,
 				AAABAC9923B1FB1400C7BAA6 /* Main.storyboard in Resources */,
+				AAB5C80623C210560002D659 /* CastCollectionViewCell.xib in Resources */,
 				AAB1407223B7F74200B61B5E /* DetailsCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,10 +369,12 @@
 				AAAB58EE23BE68E300B058C5 /* CastVC.swift in Sources */,
 				AAAE659C23B2C066004C6DB0 /* Reachability.swift in Sources */,
 				AAAE659F23B2C0DC004C6DB0 /* URLs.swift in Sources */,
+				AAB5C80523C210560002D659 /* CastCollectionViewCell.swift in Sources */,
 				AA2B3C0A23B51F8B0084CD7C /* PopularPeopleDataProvider.swift in Sources */,
 				AAABACAA23B2003900C7BAA6 /* SuperStarsVC.swift in Sources */,
 				AAAE65A223B2E4CF004C6DB0 /* PopularPeople.swift in Sources */,
 				AAABAC9423B1FB1400C7BAA6 /* SceneDelegate.swift in Sources */,
+				AAB5C80823C297610002D659 /* MovieCrew.swift in Sources */,
 				AA58872C23B58B0A006504B4 /* SuperStarsCell.swift in Sources */,
 				AAB38EA023B6B05A00B6A57C /* DetailsVC.swift in Sources */,
 			);

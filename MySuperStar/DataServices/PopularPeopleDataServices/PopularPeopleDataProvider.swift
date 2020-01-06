@@ -60,5 +60,15 @@ class PopularPeopleDataProvider {
             }
         }
     }
-    
+    class func getCrewData(movie_id: Int, completation: @escaping (_ crew: MovieCrew?) -> ()){
+       let url = "https://api.themoviedb.org/3/movie/" + String(movie_id) + "/credits?api_key=5d3fa758ba1c2690af9c4455aa75790e"
+        Alamofire.request(url).responseData { (response) in
+            do {
+            let jsonDecoder = try JSONDecoder().decode(MovieCrew.self, from: response.data!)
+                completation(jsonDecoder)
+            } catch {
+                print("error")
+            }
+        }
+    }
 }

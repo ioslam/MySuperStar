@@ -539,6 +539,7 @@
                     </view>
                     <connections>
                         <outlet property="back_iv" destination="1Rb-NC-Umt" id="Uqs-R1-fWg"/>
+                        <outlet property="castCollectionView" destination="E8v-zs-oL8" id="l77-YW-CkY"/>
                         <outlet property="character_label" destination="wU0-il-1e5" id="qHz-kE-xHn"/>
                         <outlet property="movie_overview_txt" destination="aDB-ni-VHW" id="yzL-0T-EcM"/>
                         <outlet property="navBar" destination="Heh-uh-n7z" id="Xmk-6R-8bf"/>
@@ -585,7 +586,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zel-vW-A2i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1477" y="686"/>
+            <point key="canvasLocation" x="1436" y="812"/>
         </scene>
         <!--Stars-->
         <scene sceneID="Ir5-10-krm">

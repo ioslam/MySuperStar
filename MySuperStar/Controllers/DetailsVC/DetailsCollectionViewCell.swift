@@ -15,13 +15,13 @@ class DetailsCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupView()    }
+        setupView()
+    }
     func setupView() {
-           cell_view.layer.cornerRadius  = 5
-           cell_view.layer.masksToBounds = true
-           iv.clipsToBounds = true
-          
-       }
+        cell_view.layer.cornerRadius  = 5
+        cell_view.layer.masksToBounds = true
+        iv.clipsToBounds = true
+    }
     func displayImg(URLString : String){
         
         let url = URL(string: URLs.ImageRequestURL + URLString)
