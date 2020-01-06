@@ -117,12 +117,12 @@ class DetailsVC: BaseVC {
 
 extension DetailsVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.movieCredits?.cast.count ?? 1
+        return self.movieCredits?.cast?.count ?? 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cell_ID, for: indexPath) as? DetailsCollectionViewCell else { return UICollectionViewCell() }
-        cell.displayImg(URLString: movieCredits?.cast[indexPath.row].poster_path ?? "")
+        cell.displayImg(URLString: movieCredits?.cast?[indexPath.row].poster_path ?? "")
         return cell
     }
 }
@@ -141,7 +141,7 @@ extension DetailsVC : UICollectionViewDelegate, UICollectionViewDelegateFlowLayo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let VC = storyboard.instantiateViewController(withIdentifier: "castVC") as! CastVC
-        VC.cast = movieCredits?.cast[indexPath.row]
+        VC.cast = movieCredits?.cast?[indexPath.row]
         present(VC, animated: true, completion: ({
             
         }))

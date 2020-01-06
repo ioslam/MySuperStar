@@ -46,7 +46,7 @@ class CastVC: BaseVC {
         PopularPeopleDataProvider.getCrewData(movie_id: cast?.id ?? 5) { (movieCrew) in
             self.crew = movieCrew
             self.castCollectionView.reloadData()
-            print(self.crew!)
+            //print(self.crew!)
             
         }
     }
@@ -66,12 +66,13 @@ class CastVC: BaseVC {
 extension CastVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return crew?.crew?.count ?? 3
+        return crew?.cast?.count ?? 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as? CastCollectionViewCell else { return UICollectionViewCell() }
-        cell.actor_name_label.text = self.crew?.crew?[indexPath.row].name ?? "xx"
+        cell.actor_name_label.text = self.crew?.cast?[indexPath.row].name ?? "Unknown"
+        cell.displayImg(URLString: self.crew?.cast?[indexPath.row].profile_path ?? "placeholder")
         return cell
     }
         
