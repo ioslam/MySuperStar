@@ -6,9 +6,9 @@
 //  Copyright © 2020 Eslam. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import Kingfisher
+
 class CastVC: BaseVC {
     
     var movies: Movies?

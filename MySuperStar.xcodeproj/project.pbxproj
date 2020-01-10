@@ -27,6 +27,7 @@
 		AAB1407223B7F74200B61B5E /* DetailsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB1407023B7F74200B61B5E /* DetailsCollectionViewCell.xib */; };
 		AAB1407423B8231900B61B5E /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1407323B8231900B61B5E /* Details.swift */; };
 		AAB38EA023B6B05A00B6A57C /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB38E9F23B6B05A00B6A57C /* DetailsVC.swift */; };
+		AAB3BFDC23C7E8CA00046275 /* SearchQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB3BFDB23C7E8CA00046275 /* SearchQuery.swift */; };
 		AAB5C80523C210560002D659 /* CastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB5C80323C210550002D659 /* CastCollectionViewCell.swift */; };
 		AAB5C80623C210560002D659 /* CastCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB5C80423C210550002D659 /* CastCollectionViewCell.xib */; };
 		AD42587CDB1A04644D42DB48 /* Pods_MySuperStar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B685C3FA7A3E8537948EF8 /* Pods_MySuperStar.framework */; };
@@ -59,6 +60,7 @@
 		AAB1407023B7F74200B61B5E /* DetailsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsCollectionViewCell.xib; sourceTree = "<group>"; };
 		AAB1407323B8231900B61B5E /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
 		AAB38E9F23B6B05A00B6A57C /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		AAB3BFDB23C7E8CA00046275 /* SearchQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchQuery.swift; sourceTree = "<group>"; };
 		AAB5C80323C210550002D659 /* CastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastCollectionViewCell.swift; sourceTree = "<group>"; };
 		AAB5C80423C210550002D659 /* CastCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastCollectionViewCell.xib; sourceTree = "<group>"; };
 		BE530C4B05CD0C16341A3213 /* Pods-MySuperStar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySuperStar.release.xcconfig"; path = "Target Support Files/Pods-MySuperStar/Pods-MySuperStar.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,7 +157,6 @@
 				AAABACAB23B2011300C7BAA6 /* DataServices */,
 				AAABACA523B1FDD000C7BAA6 /* Models */,
 				AAABACA623B1FDDD00C7BAA6 /* Controllers */,
-				EF0A07BF23C35CED001BD43C /* SearchVC */,
 				AAABACA723B1FE0600C7BAA6 /* Views */,
 				AAABACA823B1FE5200C7BAA6 /* Supporting Files */,
 			);
@@ -175,6 +176,7 @@
 			children = (
 				AAABAC9523B1FB1400C7BAA6 /* BaseVC.swift */,
 				AAA90C4423B2166000F4E75D /* SuperStarsVC */,
+				EF0A07BF23C35CED001BD43C /* SearchVC */,
 				AAB38E9E23B6AED100B6A57C /* DetailsVC */,
 				AAAB58EC23BE68A700B058C5 /* CastVC */,
 			);
@@ -231,6 +233,7 @@
 				AAB1407323B8231900B61B5E /* Details.swift */,
 				AAAB58EF23BE9C4700B058C5 /* Movies.swift */,
 				EF7BDBDF23BAB8D400D0B41C /* MovieCredits.swift */,
+				AAB3BFDB23C7E8CA00046275 /* SearchQuery.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				AAB5C80523C210560002D659 /* CastCollectionViewCell.swift in Sources */,
 				AA2B3C0A23B51F8B0084CD7C /* PopularPeopleDataProvider.swift in Sources */,
 				AAABACAA23B2003900C7BAA6 /* SuperStarsVC.swift in Sources */,
+				AAB3BFDC23C7E8CA00046275 /* SearchQuery.swift in Sources */,
 				AAAE65A223B2E4CF004C6DB0 /* PopularPeople.swift in Sources */,
 				AAABAC9423B1FB1400C7BAA6 /* SceneDelegate.swift in Sources */,
 				AA58872C23B58B0A006504B4 /* SuperStarsCell.swift in Sources */,

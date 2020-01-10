@@ -19,6 +19,7 @@ class SuperStarsVC: BaseVC {
     private var lastPage = 1
     
     @IBOutlet weak var superstarsCollectionView: UICollectionView!
+    
     @IBAction func searchButtonPressed(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "searchVC")
@@ -108,9 +109,11 @@ extension SuperStarsVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLa
         let height = CGFloat(230)
         return CGSize(width: width, height: height)
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let result = self.results![indexPath.row]
        let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -118,6 +121,7 @@ extension SuperStarsVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLa
         VC.results = result
        present(VC, animated: true, completion: nil)
     }
+    
  func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
         let count = self.results?.count

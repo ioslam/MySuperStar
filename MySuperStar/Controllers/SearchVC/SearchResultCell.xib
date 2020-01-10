@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="search_resultCell" rowHeight="113" id="KGk-i7-Jjw" customClass="SearchResultCell" customModule="MySuperStar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="113"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="390" height="113"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VuS-b6-Wpl">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="113"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rgG-op-5Rj">
+                                <rect key="frame" x="10" y="21.5" width="70" height="70"/>
+                                <color key="backgroundColor" red="0.050980392156862744" green="0.050980392156862744" blue="0.050980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="5E6-r4-Gg8"/>
+                                    <constraint firstAttribute="width" constant="70" id="rnm-8X-DVj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Henry Marcthony" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yT0-0w-GA4">
+                                <rect key="frame" x="130" y="38.5" width="130.5" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="INV-Ta-WYQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.050980392159999999" green="0.050980392159999999" blue="0.050980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yT0-0w-GA4" firstAttribute="centerY" secondItem="VuS-b6-Wpl" secondAttribute="centerY" id="YUu-hZ-vcJ"/>
+                            <constraint firstItem="rgG-op-5Rj" firstAttribute="centerY" secondItem="VuS-b6-Wpl" secondAttribute="centerY" id="piO-NT-Aac"/>
+                            <constraint firstItem="rgG-op-5Rj" firstAttribute="leading" secondItem="VuS-b6-Wpl" secondAttribute="leading" constant="10" id="s5T-Gu-JBs"/>
+                            <constraint firstItem="yT0-0w-GA4" firstAttribute="leading" secondItem="rgG-op-5Rj" secondAttribute="trailing" constant="50" id="tVQ-ew-qSc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.050980392156862744" green="0.050980392156862744" blue="0.050980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="VuS-b6-Wpl" secondAttribute="bottom" id="Eo3-Al-avP"/>
+                    <constraint firstItem="VuS-b6-Wpl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Rja-Nw-fI9"/>
+                    <constraint firstAttribute="trailing" secondItem="VuS-b6-Wpl" secondAttribute="trailing" id="TMQ-oA-nPB"/>
+                    <constraint firstItem="VuS-b6-Wpl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ZUv-Wv-o49"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="iv" destination="rgG-op-5Rj" id="HaP-9a-jCS"/>
+                <outlet property="name_label" destination="yT0-0w-GA4" id="fzu-FN-tyX"/>
+            </connections>
+            <point key="canvasLocation" x="182.60869565217394" y="136.94196428571428"/>
+        </tableViewCell>
+    </objects>
+</document>
