@@ -10,7 +10,7 @@ import UIKit
 class SearchVC: BaseVC {
     
     var search_result_cellID = "search_resultCell"
-    private var result: [SResult]? = []
+    private var result: [Result]? = []
     private var isloading = false
     private var currentPage = 1
     private var lastPage = 1
@@ -37,7 +37,7 @@ class SearchVC: BaseVC {
         
         PopularPeopleDataProvider.getQuery(page: currentPage+1, name: searchName!) { (searchQuery, lastPage) in
             
-            for data in searchQuery.results! {
+            for data in searchQuery.results {
                 self.result?.append(data)
             }
             self.isloading = false
@@ -56,7 +56,8 @@ extension SearchVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: search_result_cellID, for: indexPath) as? SearchResultCell else { return UITableViewCell() }
         cell.name_label?.text = result?[indexPath.row].name ?? "Unknown"
-        cell.displayImg(URLString: result?[indexPath.row].profile_path ?? "")
+        cell.displayImg(URLString: result?[indexPath.row].profilePath ?? "")
+        cell.selectionStyle = .none
         return cell
     }
 }
@@ -67,7 +68,7 @@ extension SearchVC: UITableViewDelegate {
         let person = self.result![indexPath.row]
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let VC = storyboard.instantiateViewController(withIdentifier: "detailsVC") as! DetailsVC
-        VC.person = person
+        VC.results = person
         print(person.id!)
         print(person.name!)
 

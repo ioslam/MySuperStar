@@ -12,7 +12,7 @@ class DetailsVC: BaseVC {
     // Declare vars
     let cell_ID = "detailsCell"
     var results: Result?
-    var person: SResult?
+    //var person: SResult?
     var details: Details?
     var movieCredits: MovieCredits?
     
@@ -69,12 +69,12 @@ class DetailsVC: BaseVC {
         relatedMoviesCollectionView.delegate = self
         relatedMoviesCollectionView.dataSource = self
         relatedMoviesCollectionView.register(UINib(nibName: "DetailsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "detailsCell")
-        navBar.topItem?.title = results?.name ?? person?.name
+        navBar.topItem?.title = results?.name ?? "nn"
         fetchData()
     }
     
     func fetchData() {
-        PopularPeopleDataProvider.getPopularPeopleDetails(person_id: results?.id ?? person?.id ?? 0) { (error, details) in
+        PopularPeopleDataProvider.getPopularPeopleDetails(person_id: results?.id ?? 1 ) { (error, details) in
             self.details = details
             self.dispalyImage(imageUrl: details?.profile_path ?? "150")
             self.dispalyData(details: details)
@@ -109,7 +109,7 @@ class DetailsVC: BaseVC {
     }
     
     func displayMovies() {
-        PopularPeopleDataProvider.getMovieCredits(person_id: results?.id ?? person?.id ?? 0) { (movie_Credits) in
+        PopularPeopleDataProvider.getMovieCredits(person_id: results?.id ?? 1) { (movie_Credits) in
             self.movieCredits = movie_Credits
             self.relatedMoviesCollectionView.reloadData()
 

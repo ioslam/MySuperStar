@@ -72,18 +72,18 @@ class PopularPeopleDataProvider {
         }
     }
     
-    class func getQuery(page : Int = 1, name : String , complation: @escaping (_ searchQuery : SearchQuery , _ lastPage : Int)-> Void){
+    class func getQuery(page : Int = 1, name : String , complation: @escaping (_ searchQuery : PopularPeople , _ lastPage : Int)-> Void){
         
         let url = URLs.SearchQueryBaseURL + name + URLs.SearchQueryMiddleURL + String(page) + URLs.SearchQueryEndURL
         
         Alamofire.request(url).responseJSON { (response) in
             
             do{
-                let JSONdecoder = try JSONDecoder().decode(SearchQuery.self , from: response.data!)
+                let JSONdecoder = try JSONDecoder().decode(PopularPeople.self , from: response.data!)
                 
                 var lastPage = Int()
                 
-                if let totalPages = JSONdecoder.total_pages{
+                if let totalPages = JSONdecoder.totalPages{
                     lastPage = totalPages
                 }
                 
