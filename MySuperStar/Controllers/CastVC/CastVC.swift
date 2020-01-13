@@ -14,6 +14,9 @@ class CastVC: BaseVC {
     var movies: Movies?
     var cast: Cast?
     var crew: MovieCrew?
+    var results: [Result]? = []
+    var details: Details?
+    var cast_Delegate: CastDelegate?
     var cellID = "castCell"
     
     @IBOutlet weak var navBar: UINavigationBar!
@@ -46,8 +49,6 @@ class CastVC: BaseVC {
         PopularPeopleDataProvider.getCrewData(movie_id: cast?.id ?? 5) { (movieCrew) in
             self.crew = movieCrew
             self.castCollectionView.reloadData()
-            //print(self.crew!)
-            
         }
     }
    
@@ -62,6 +63,13 @@ class CastVC: BaseVC {
         release_date_label.text = "Release(\(movie.release_date ?? "- - -"))"
         character_label.text = cast?.character ?? "title.."
     }
+    
+    func updateDetailsData(id: Int){
+        print(self.crew?.cast?[1].id ?? 55)
+        PopularPeopleDataProvider.getPopularPeopleDetails(person_id: self.crew?.cast?[1].id ?? 55) { (err, details) in
+                  self.details = details
+              }
+    }
 }
 extension CastVC: UICollectionViewDataSource {
     
@@ -75,7 +83,6 @@ extension CastVC: UICollectionViewDataSource {
         cell.displayImg(URLString: self.crew?.cast?[indexPath.row].profile_path ?? "placeholder")
         return cell
     }
-        
 }
 extension CastVC: UICollectionViewDelegateFlowLayout {
     
@@ -86,6 +93,14 @@ extension CastVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 3, bottom: 0, right: 2)
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let id = self.crew?.cast?[indexPath.row].id ?? 55
+        let name = self.crew?.cast?[indexPath.row].name ?? "Unknown"
+        //self.updateDetailsData(id: 1)
+        cast_Delegate?.sendDetails(person_id: id, name: name)
+        dismiss(animated: true, completion: nil)
     }
 }
 

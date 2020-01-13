@@ -48,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y48-EE-aLO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4892" y="-89"/>
+            <point key="canvasLocation" x="5831.1999999999998" y="-89.505247376311857"/>
         </scene>
         <!--Popular People-->
         <scene sceneID="tne-QT-ifu">
@@ -98,7 +98,7 @@
         <!--DetailsVC-->
         <scene sceneID="21A-ce-oMB">
             <objects>
-                <viewController storyboardIdentifier="detailsVC" automaticallyAdjustsScrollViewInsets="NO" id="B4n-Lf-kOh" customClass="DetailsVC" customModule="MySuperStar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailsVCx" automaticallyAdjustsScrollViewInsets="NO" id="B4n-Lf-kOh" customClass="DetailsVC" customModule="MySuperStar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z2Z-ZY-CgB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,7 +108,7 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhL-ou-V9P">
                                         <rect key="frame" x="100" y="0.0" width="198" height="205"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.050980392156862744" green="0.050980392156862744" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="XhL-ou-V9P" secondAttribute="height" multiplier="1:1" constant="-7" id="WYE-Ba-GJ4"/>
                                         </constraints>
@@ -383,11 +383,12 @@
                         <outlet property="popUpHeight" destination="21q-Xj-t8n" id="49i-gT-PIX"/>
                         <outlet property="popupVeiw" destination="cO7-7K-OHh" id="nZ9-Tz-8tN"/>
                         <outlet property="relatedMoviesCollectionView" destination="EqZ-Cn-isM" id="7N6-1n-JkG"/>
+                        <segue destination="PaG-2n-Iuc" kind="show" identifier="goToMovie" id="c2a-Se-tnJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YiR-qp-QMe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3338" y="-80"/>
+            <point key="canvasLocation" x="4276" y="-80.50974512743629"/>
         </scene>
         <!--CastVC-->
         <scene sceneID="Ynl-Jg-ytu">
@@ -585,6 +586,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lbr-V5-M4w"/>
                     </view>
+                    <navigationItem key="navigationItem" id="qNt-9R-EsC"/>
                     <connections>
                         <outlet property="back_iv" destination="1Rb-NC-Umt" id="Uqs-R1-fWg"/>
                         <outlet property="castCollectionView" destination="E8v-zs-oL8" id="l77-YW-CkY"/>
@@ -597,7 +599,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tB1-gb-alQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4116" y="-81.409295352323838"/>
+            <point key="canvasLocation" x="5055.1999999999998" y="-81.409295352323838"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="4RD-00-SJi">
@@ -661,6 +663,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLw-y6-RGx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1477" y="-88"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AAV-aU-F7p">
+            <objects>
+                <navigationController storyboardIdentifier="detailsVC" automaticallyAdjustsScrollViewInsets="NO" id="m3R-FD-Fld" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wzm-ao-xUk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="B4n-Lf-kOh" kind="relationship" relationship="rootViewController" id="GQL-QL-1tz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="15b-W9-Uvi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3336.8000000000002" y="-80.50974512743629"/>
         </scene>
     </scenes>
     <resources>

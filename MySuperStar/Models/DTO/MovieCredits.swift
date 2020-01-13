@@ -33,5 +33,6 @@ struct Crew : Codable {
     
     var name : String?
     var profile_path : String?
+    var id: Int?
 }
 

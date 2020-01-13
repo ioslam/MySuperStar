@@ -12,7 +12,6 @@ class DetailsVC: BaseVC {
     // Declare vars
     let cell_ID = "detailsCell"
     var results: Result?
-    //var person: SResult?
     var details: Details?
     var movieCredits: MovieCredits?
     
@@ -63,9 +62,6 @@ class DetailsVC: BaseVC {
     }
     // Main Method
     override func setupOutlets() {
-//        if let person_id = person?.id {
-//            results?.id? = 66
-//        }
         relatedMoviesCollectionView.delegate = self
         relatedMoviesCollectionView.dataSource = self
         relatedMoviesCollectionView.register(UINib(nibName: "DetailsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "detailsCell")
@@ -143,9 +139,19 @@ extension DetailsVC : UICollectionViewDelegate, UICollectionViewDelegateFlowLayo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let VC = storyboard.instantiateViewController(withIdentifier: "castVC") as! CastVC
+        VC.cast_Delegate = self
         VC.cast = movieCredits?.cast?[indexPath.row]
+        print(movieCredits?.id ?? 88)
         present(VC, animated: true, completion: ({
             
         }))
+    }
+}
+
+extension DetailsVC: CastDelegate {
+    func sendDetails(person_id: Int?, name: String?) {
+        results?.id = person_id
+        results?.name = name
+        self.viewDidLoad()
     }
 }

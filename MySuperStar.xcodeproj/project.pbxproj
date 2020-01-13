@@ -33,6 +33,7 @@
 		EF01E96523C38379001A0CAD /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF01E96323C38379001A0CAD /* SearchResultCell.swift */; };
 		EF01E96623C38379001A0CAD /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF01E96423C38379001A0CAD /* SearchResultCell.xib */; };
 		EF0A07C123C35D65001BD43C /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0A07C023C35D65001BD43C /* SearchVC.swift */; };
+		EF1775F323CC6238003CEF6E /* CastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1775F223CC6238003CEF6E /* CastDelegate.swift */; };
 		EF7BDBE023BAB8D400D0B41C /* MovieCredits.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7BDBDF23BAB8D400D0B41C /* MovieCredits.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		EF01E96323C38379001A0CAD /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		EF01E96423C38379001A0CAD /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		EF0A07C023C35D65001BD43C /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		EF1775F223CC6238003CEF6E /* CastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastDelegate.swift; sourceTree = "<group>"; };
 		EF7BDBDF23BAB8D400D0B41C /* MovieCredits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCredits.swift; sourceTree = "<group>"; };
 		F2BFD23EF3349ADE21129738 /* Pods-MySuperStar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySuperStar.debug.xcconfig"; path = "Target Support Files/Pods-MySuperStar/Pods-MySuperStar.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -231,6 +233,7 @@
 				AAB1407323B8231900B61B5E /* Details.swift */,
 				AAAB58EF23BE9C4700B058C5 /* Movies.swift */,
 				EF7BDBDF23BAB8D400D0B41C /* MovieCredits.swift */,
+				EF1775F223CC6238003CEF6E /* CastDelegate.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				EF7BDBE023BAB8D400D0B41C /* MovieCredits.swift in Sources */,
 				AAAB58F023BE9C4700B058C5 /* Movies.swift in Sources */,
 				AAAB58EE23BE68E300B058C5 /* CastVC.swift in Sources */,
+				EF1775F323CC6238003CEF6E /* CastDelegate.swift in Sources */,
 				AAAE659C23B2C066004C6DB0 /* Reachability.swift in Sources */,
 				AAAE659F23B2C0DC004C6DB0 /* URLs.swift in Sources */,
 				AAB5C80523C210560002D659 /* CastCollectionViewCell.swift in Sources */,

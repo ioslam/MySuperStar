@@ -117,7 +117,7 @@ extension SuperStarsVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLa
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let result = self.results![indexPath.row]
        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-       let VC = storyboard.instantiateViewController(withIdentifier: "detailsVC") as! DetailsVC
+       let VC = storyboard.instantiateViewController(withIdentifier: "detailsVCx") as! DetailsVC
         VC.results = result
        present(VC, animated: true, completion: nil)
     }

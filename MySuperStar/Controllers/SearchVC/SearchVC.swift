@@ -67,10 +67,8 @@ extension SearchVC: UITableViewDelegate {
         
         let person = self.result![indexPath.row]
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let VC = storyboard.instantiateViewController(withIdentifier: "detailsVC") as! DetailsVC
+        let VC = storyboard.instantiateViewController(withIdentifier: "detailsVCx") as! DetailsVC
         VC.results = person
-        print(person.id!)
-        print(person.name!)
 
         present(VC, animated: true, completion: nil)
     }
