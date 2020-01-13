@@ -14,8 +14,6 @@ class CastVC: BaseVC {
     var movies: Movies?
     var cast: Cast?
     var crew: MovieCrew?
-    var results: [Result]? = []
-    var details: Details?
     var cast_Delegate: CastDelegate?
     var cellID = "castCell"
     
@@ -64,12 +62,6 @@ class CastVC: BaseVC {
         character_label.text = cast?.character ?? "title.."
     }
     
-    func updateDetailsData(id: Int){
-        print(self.crew?.cast?[1].id ?? 55)
-        PopularPeopleDataProvider.getPopularPeopleDetails(person_id: self.crew?.cast?[1].id ?? 55) { (err, details) in
-                  self.details = details
-              }
-    }
 }
 extension CastVC: UICollectionViewDataSource {
     

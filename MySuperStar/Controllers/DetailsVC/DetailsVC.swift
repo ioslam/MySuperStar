@@ -9,7 +9,7 @@ import Kingfisher
 import UIKit
 
 class DetailsVC: BaseVC {
-    // Declare vars
+    // Declare vvars
     let cell_ID = "detailsCell"
     var results: Result?
     var details: Details?
@@ -141,7 +141,6 @@ extension DetailsVC : UICollectionViewDelegate, UICollectionViewDelegateFlowLayo
         let VC = storyboard.instantiateViewController(withIdentifier: "castVC") as! CastVC
         VC.cast_Delegate = self
         VC.cast = movieCredits?.cast?[indexPath.row]
-        print(movieCredits?.id ?? 88)
         present(VC, animated: true, completion: ({
             
         }))

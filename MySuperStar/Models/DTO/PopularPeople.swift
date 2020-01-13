@@ -23,7 +23,6 @@ struct Result: Codable {
     
     enum CodingKeys: String, CodingKey {
         case id
-        case knownForDepartment = "known_for_department"
         case profilePath = "profile_path"
         case knownFor = "known_for"
         case name
